@@ -1,0 +1,5 @@
+simp.id	name
+Solyc09g064470	SlMUR3
+Solyc07g044960	SlXST1
+Solyc07g049610	SlXST2
+Solyc02g092840	SlGT
