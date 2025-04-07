@@ -1,3 +1,4 @@
+##### Analysis of canonical immunity elements ##########
 rm(list = ls())
 setwd("~/Documents/HOH_260/EXP/Phospho/SFCH/")
 getwd()
