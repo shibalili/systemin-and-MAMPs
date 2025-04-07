@@ -1,0 +1,5 @@
+simp.id	name
+Solyc09g059430	SlRIN4-1
+Solyc06g083390	SlRIN4-2
+Solyc12g098440	SlRIN4-3
+Solyc11g012010	SlRIN4-4
