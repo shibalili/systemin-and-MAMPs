@@ -1,7 +1,0 @@
-simp.id	name
-Solyc01g006350	SlCalS1
-Solyc01g006370	SlCalS3a
-Solyc01g073750	SlCalS3b
-Solyc01g006360	SlCalS9
-Solyc03g111570	SlCalS10a
-Solyc07g053980	SlCalS12
