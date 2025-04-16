@@ -131,10 +131,6 @@ p1 <- pheatmap(k,color=viridis(3),main = "",cluster_rows = F,cluster_cols=F,show
 #save_pheatmap_pdf(p1, "../SFCH/Figure/Diss_chap1/pheatmap_share_sp.pdf")
 
 
-########## history ###########
-gaps_row <- c(table(Input$module)[[1]],sum(table(Input$module)[1:2]),sum(table(Input$module)[1:3]),sum(table(Input$module)[1:4]),
-              sum(table(Input$module)[1:5]),sum(table(Input$module)[1:6]),sum(table(Input$module)[1:7]))
-
 
 
 
