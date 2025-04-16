@@ -3,12 +3,6 @@ setwd("~/Documents/HOH_260/EXP/Phospho/SFCH/")
 getwd()
 library(tidyverse)
 
-summary_df <- readRDS("../SFCH/Data/annotation/summary4701/SFCH_summary4701_PSMF_threshold_Mfuzz_df.rds") #185 col
-summary_df <- readRDS("../SFCH/Data/annotation/summary4701/SFCH_summary4701_PSMF_threshold_Mfuzz_protein_class_df.rds") #190 col
-summary_df <- readRDS("../SFCH/Data/annotation/summary4701/summary4701_df_color.rds") #191 col
-summary_df <- readRDS("../SFCH/Data/annotation/summary4701/summary4701_df_color_pti_group.rds")#191 col
-
-
 int_norm <- readRDS("../SFCH/Data/Intensity_4701P_sites_Norm.rds")
 ########### number of measurement ########### 
 #identical(rownames(int_norm),rownames(count))
