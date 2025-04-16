@@ -77,24 +77,4 @@ ggsave("../SFCH/Figure/Diss_chap1/Upset_PTI.pdf",,width=8,height =5)
 
 dev.off()
 
-################### history ####################
-# draw the pies
-library(ggforce)
-# make regulation a factor
-pie <- what
-# calculate the start and end angles for each pie
-pie <- left_join(pie,pie %>% group_by(Sig_time_pointX,super_class,treatment)%>%summarize(total = sum(freq)))%>%
-                             group_by(Sig_time_pointX,super_class,treatment) %>%mutate(nb_frac = 2*pi*cumsum(freq)/total,
-                                                                      start = lag(nb_frac, default = 0))
-pie$Sig_time_pointX <- as.numeric(pie$Sig_time_pointX )
-pie$super_class <-  as.numeric(pie$super_class)
-# overall scaling for pie size
-scale = .5/sqrt(max(pie$total))
-ggplot(pie) + geom_arc_bar(aes(x0 = Sig_time_pointX, y0 = super_class, r0 = 0, r = sqrt(total)*scale,
-                   start = start, end = nb_frac)) +facet_grid(~treatment)+
-  coord_fixed() +
-  theme_minimal() +
-  theme(panel.grid.minor = element_blank())
-
-
 
