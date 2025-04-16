@@ -58,16 +58,6 @@ write.xlsx("../SFCH/Data/WGCNA/genie3/KPnet_edgePLL1a_1681_anno.xlsx",x =my_data
 
 
 
-################### history #########################
-# Transporter #
-E_node_trpt <- E_node%>%filter(super_class=="Transporter",str_detect(Protein_class,"Sl"))
-knitr::kable(table(E_node_trpt$Protein_class), format = "simple")
-# PPase #
-E_node_ppase <- E_node%>%filter(super_class=="PPase")
-knitr::kable(table(E_node_ppase$Protein_class), format = "simple")
-# hormone #
-E_node_hom <- E_node%>%filter(super_class=="hormone")
-knitr::kable(table(E_node_hom$Protein_class), format = "simple")
 
 
 
