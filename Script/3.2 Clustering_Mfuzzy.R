@@ -126,19 +126,4 @@ a <- a%>%filter(treatment!="H2O")
 
 
 
-########################### hostory ############################################################################
-############# plot systemin specific: Remove pattern shared with flg22 and chitin and (H2O) #############
-distribution <- readRDS("../SFCH/Data/clustering/SFCH_a_k7_NewPS2+MF1_threshold_Mfuzz_time_arg_order_dist.rds")%>%filter(sys!=H2O,sys!=flg22,sys!=chitin)
-Order_a_rem <- Order_a[Order_a$ppep.site%in%rownames(distribution),]
-# remove more:...
-rem <- c(distribution%>%filter(sys=="2",flg22=="5"|chitin=="5"|H2O=="5")%>%pull(ppep.site),
-         distribution%>%filter(sys=="5",flg22=="2"|chitin=="2"|H2O=="2")%>%pull(ppep.site))%>%unique()
-Order_a_rem <- Order_a_rem%>%filter(!ppep.site%in%rem)
-
-int_norm <- readRDS("../SFCH/Data/Intensity_4701P_sites_Norm.rds")%>%select(c(7:138))
-a <- Order_a_rem[Order_a_rem$ppep.site%in%rownames(int_norm),]
-#Rm water:do not display water
-a <- a%>%filter(treatment!="H2O")
-
-
 
